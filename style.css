@@ -1,0 +1,16 @@
+.jumbotron {
+    background-color: #86cecb;
+    color: white;
+    font-family: "Exo 2", sans-serif;
+}
+
+.video {
+    display: block;
+    margin: 0 auto;
+}
+
+hr {
+    background-color: #86cecb;
+    height: 10px;
+    border: none;
+}
