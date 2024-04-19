@@ -11,6 +11,47 @@
     <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        .carousel {
+            border-radius: 100px 100px 100px 100px;
+            overflow: hidden;
+            height: 500px;
+            margin-bottom: 60px;
+            margin-top: 40px;
+            margin-left: 100px;
+            margin-right: 100px;
+        }
+        /* Since positioning the image, we need to help out the caption */
+        .carousel-caption {
+            z-index: 10;
+        }
+        /* Declare heights because of positioning of img element */
+        .carousel .item {
+            width: 100%;
+            height: 500px;
+            background-color: #777;
+        }
+        .carousel-inner > .item > img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            min-width: 100%;
+            height: 500px;
+        }
+        @media (min-width: 768px) {
+            .carousel-caption p {
+                margin-bottom: 20px;
+                font-size: 21px;
+                line-height: 1.4;
+            }
+        }
+        img {
+            border-radius: 100px 100px 100px 100px;
+        }
+        .glyphicon {
+            color: #e12885
+        }
+    </style>
 </head>
 <body>
 <div class="container-fluid">
@@ -75,6 +116,63 @@
             </tr>
         </tbody>
     </table>
+    <br>
+    <div id="carousel" class="carousel slide" data-ride="carousel" data-interval="30000" data-pause="hover">
+        <!-- Menu -->
+        <ol class="carousel-indicators">
+            <li data-target="#carousel" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel" data-slide-to="1"></li>
+            <li data-target="#carousel" data-slide-to="2"></li>
+            <li data-target="#carousel" data-slide-to="3"></li>
+            <li data-target="#carousel" data-slide-to="4"></li>
+            <li data-target="#carousel" data-slide-to="5"></li>
+            <li data-target="#carousel" data-slide-to="6"></li>
+            <li data-target="#carousel" data-slide-to="7"></li>
+            <li data-target="#carousel" data-slide-to="8"></li>
+            <li data-target="#carousel" data-slide-to="9"></li>
+        </ol>
+    
+        <!-- Items -->
+        <div class="carousel-inner">
+            <div class="item active">
+                <img src="mikuv2boxart.webp" alt="Slide 1" />
+            </div>
+            <div class="item">
+                <img src="meikoandkaito.jpg" alt="Slide 2" />
+            </div>
+            <div class="item">
+                <img src="Miku_Expo_2024_North_America.jpg" alt="Slide 3" />
+            </div>
+            <div class="item">
+                <img src="DECO_27_RabbitHole.webp" alt="Slide 4" />
+            </div>
+            <div class="item">
+                <img src="RenaiSaiban.webp" alt="Slide 5" />
+            </div>
+            <div class="item">
+                <img src="Tell_your_world_f_loading_screen.webp" alt="Slide 6" />
+            </div>
+            <div class="item">
+                <img src="Just-be-friends.webp" alt="Slide 7" />
+            </div>
+            <div class="item">
+                <img src="URcover.webp" alt="Slide 8" />
+            </div>
+            <div class="item">
+                <img src="momonyancat.jpg" alt="Slide 9" />
+            </div>
+            <div class="item">
+                <img src="mikuconcertdrawing.png" alt="Slide 10" />
+            </div>
+        </div> 
+        <a href="#carousel" class="left carousel-control" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+        </a>
+        <a href="#carousel" class="right carousel-control" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+        </a>
+    </div>
+    <h2 class="text-center">Carousel of random Miku and VOCALOID images...</h2>
     <br>
     <p class="text-center">The original script for the video is also here on the site...</p>
 </div>
