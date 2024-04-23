@@ -11,6 +11,26 @@
     <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://kit.fontawesome.com/8fb199d807.js" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function() {
+            $('#contactForm').submit(function(e) {
+                e.preventDefault();
+                $.ajax({
+                    type: 'POST',
+                    url: '/aboutauthor.html', // Make sure this URL matches your server route
+                    data: $(this).serialize(),
+                    success: function(response) {
+                        $('#response').html('<div class="alert alert-success">' + response + '</div>');
+                        $('#contactForm')[0].reset();
+                    },
+                    error: function(xhr, status, error) {
+                        $('#response').html('<div class="alert alert-danger">' + error + '</div>');
+                    }
+                });
+            });
+        });
+    </script>
 </head>
 <body>
 <div class="container-fluid">
@@ -58,7 +78,7 @@
                                     <p>
                                         <font class="abouttext">
                                             <font color="BLACK">
-                                                Hello! My name is Jack Shorenstein and I am the creator of this website and the Having Fun Studios YouTube channel! I am currently living in Meridian, Idaho! I am very familiar with computers and how they work (that includes the Raspberry Pi, VMWare ESXi, AWS/Amazon Web Services,
+                                                Hello! My name is Jack Shorenstein and I am the creator of this website and the Studio 39 YouTube channel! I am currently living in Meridian, Idaho! I am very familiar with computers and how they work (that includes the Raspberry Pi, VMWare ESXi, AWS/Amazon Web Services,
                                                 GCP/Google Cloud Platform, Linux, and more)! If you like what you see here, you can contact me at my email <a href="mailto:jack@jackshorenstein.com">jack@jackshorenstein.com</a>! Anyways, that is all from me. Have a great day everyone!</font>
                                         </font>
                                     </p>
@@ -73,13 +93,45 @@
             </tr>
         </tbody>
     </table>
-    <h2>My Websites</h2>
-    <ul>
-        <li><a href="https://jackshorenstein.com">JackShorenstein.com</a></li>
-        <li><a href="https://old.jackshorenstein.com">90's Style Website</a></li>
-        <li><a href="https://dummies.jackshorenstein.com">AWS for Dummies</a></li>
-        <li><a href="https://dreamsbyarlene.com">DreamsByArlene.com</a></li>
-    </ul>
+    <div class="row">
+        <div class="col-sm-6">
+            <h2>My Websites</h2>
+            <ul>
+                <li><a href="https://jackshorenstein.com">JackShorenstein.com</a></li>
+                <li><a href="https://old.jackshorenstein.com">90's Style Website</a></li>
+                <li><a href="https://dummies.jackshorenstein.com">AWS for Dummies</a></li>
+                <li><a href="https://dreamsbyarlene.com">DreamsByArlene.com</a></li>
+            </ul>
+        </div>
+        <div class="col-sm-6">
+            <h2>My Socials</h2>
+            <ul>
+                <li><a href="https://youtube.com/@HFStudio39"><i class="fa-brands fa-youtube"></i> Studio 39 YouTube Channel</a></li>
+                <li><a href="https://www.instagram.com/jackshorenstein/"><i class="fa-brands fa-instagram"></i> Instagram</li>
+                <li><a href="https://twitter.com/jackshorenstein"><i class="fa-brands fa-twitter"></i> Twitter</li>
+                <li><a href="https://www.reddit.com/u/JackShorenstein"><i class="fa-brands fa-reddit"></i> Reddit</a></li>
+                <li><a href="https://www.threads.net/@JackShorenstein"><i class="fa-brands fa-threads"></i> Threads</a></li>
+            </ul>
+        </div>
+    </div>
     <br>
+    <h2>Contact the Author</h2>
+    <form id="contactForm" method="POST">
+        <div class="mb-3">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" class="form-control" id="name" name="name" required>
+        </div>
+        <div class="mb-3">
+            <label for="email" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="email" name="email" required>
+        </div>
+        <div class="mb-3">
+            <label for="message" class="form-label">Message</label>
+            <textarea class="form-control" id="message" name="message" rows="3" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+    <div id="response"></div>
+    </div>    
 </div>
 </body>
