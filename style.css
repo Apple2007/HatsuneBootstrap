@@ -22,3 +22,10 @@ hr {
 .podcasttitle {
     font-family: "Exo 2", sans-serif;
 }
+
+* {
+    box-sizing: border-box;
+    scrollbar-color:var(--pink) #fff;
+    scrollbar-width:thin;
+    cursor:url('cursor.png'), pointer;
+}
