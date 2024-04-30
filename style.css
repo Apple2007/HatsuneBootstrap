@@ -33,7 +33,7 @@ hr {
 #musicplayer{
     background:white; /* background color of player */
     border:2px solid #e74492; /* border around player */
-    width:1039px; /* width of the player */
+    width:60%; /* width of the player */
     display: block;
     margin: 0 auto;
     font-family: "Exo 2", sans-serif;
