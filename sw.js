@@ -1,4 +1,4 @@
-const CACHE_NAME = `temperature-converter-v1`;
+const CACHE_NAME = `miku-vocaloid-history`;
 
 // Use the install event to pre-cache all initial resources.
 self.addEventListener('install', event => {
