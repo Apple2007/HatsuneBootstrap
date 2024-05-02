@@ -17,21 +17,21 @@
   "screenshots": [
     {
       "src": "pictures/Miku_Screenshot_1.png",
-      "sizes": "640x320",
+      "sizes": "3434x1786",
       "type": "image/png",
       "form_factor": "wide",
       "label": "Screenshot 1"
     },
     {
       "src": "pictures/Miku_Screenshot_2.png",
-      "sizes": "640x320",
+      "sizes": "3436x1776",
       "type": "image/png",
       "form_factor": "wide",
       "label": "Screenshot 2"
     },
     {
       "src": "pictures/Miku_Screenshot_3.png",
-      "sizes": "640x320",
+      "sizes": "3430x1776",
       "type": "image/png",
       "form_factor": "wide",
       "label": "Screenshot 3"
