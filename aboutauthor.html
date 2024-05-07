@@ -67,6 +67,8 @@
     <br>
     <h1 class="text-center">About the Author</h1>
     <br>
+    <h3 id="username" class="text-center"></h3>
+    <br>
     <table width="100%">
         <tbody>
             <tr>
@@ -239,5 +241,14 @@
         margin-right: 3%;
       }
       </style>
+      <script>
+        if (!localStorage.getItem("username")) {
+                const username = prompt("What is your name? (don't worry, I'm not collecting this... look at the opensource code on GitHub!)");
+                localStorage.setItem("username", username);
+            }
+            
+        const username = localStorage.getItem("username");
+        document.getElementById("username").innerHTML = "Welcome to the About Author Page, " + username + "! Thanks for reading about Miku!";
+    </script>
 </div>
 </body>
