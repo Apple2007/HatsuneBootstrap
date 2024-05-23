@@ -123,3 +123,11 @@ input[type=range]::-moz-range-thumb {
     cursor: help;
     border:none;
 }
+
+.video{
+    width: 100%;
+    min-width:200;
+    max-width:800;
+    height: auto;
+    min-height:400;
+}
