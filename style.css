@@ -131,3 +131,11 @@ input[type=range]::-moz-range-thumb {
     height: auto;
     min-height:400;
 }
+
+#navLinks {
+    font-family: "Exo 2", sans-serif;
+}
+
+.navbar-brand {
+    font-family: "Exo 2", sans-serif;
+}
