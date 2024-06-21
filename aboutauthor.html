@@ -12,25 +12,6 @@
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://kit.fontawesome.com/8fb199d807.js" crossorigin="anonymous"></script>
-    <script>
-        $(document).ready(function() {
-            $('#contactForm').submit(function(e) {
-                e.preventDefault();
-                $.ajax({
-                    type: 'POST',
-                    url: '/aboutauthor.html', // Make sure this URL matches your server route
-                    data: $(this).serialize(),
-                    success: function(response) {
-                        $('#response').html('<div class="alert alert-success">' + response + '</div>');
-                        $('#contactForm')[0].reset();
-                    },
-                    error: function(xhr, status, error) {
-                        $('#response').html('<div class="alert alert-danger">' + error + '</div>');
-                    }
-                });
-            });
-        });
-    </script>
 </head>
 <body>
 <div class="container-fluid">
@@ -128,7 +109,14 @@
         }
             
         const username = localStorage.getItem("username");
-        document.getElementById("username").innerHTML = "Welcome to the About Author Page, " + username + "! Thanks for reading about Miku!";
+        console.log(username);
+        if (username === "Miku" || username === "miku") {
+            document.getElementById("username").innerHTML = "Wait... MIKU?! OMG, welcome! I hope I represented you right... if not, let me know! I'm a HUGE FAN! :)";
+        } else if (username === "Studio_39" || username === "Studio39" || username === "Studio 39" || username === "studio39") {
+            document.getElementById("username").innerHTML = "Hi me! Development or viewing I see.. well, enjoy your time! ;)";
+        } else {
+            document.getElementById("username").innerHTML = "Welcome to the About Author Page, " + username + "! Thanks for reading about Miku!";
+        }
     </script>
 </div>
 </body>

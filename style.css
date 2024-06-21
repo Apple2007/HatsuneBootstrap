@@ -4,11 +4,6 @@
     font-family: "Exo 2", sans-serif;
 }
 
-.video {
-    display: block;
-    margin: 0 auto;
-}
-
 hr {
     background-color: #86cecb;
     height: 10px;
@@ -124,18 +119,21 @@ input[type=range]::-moz-range-thumb {
     border:none;
 }
 
-.video{
-    width: 100%;
-    min-width:200;
-    max-width:800;
-    height: auto;
-    min-height:400;
-}
-
 #navLinks {
     font-family: "Exo 2", sans-serif;
 }
 
 .navbar-brand {
     font-family: "Exo 2", sans-serif;
+}
+
+.video {
+    display: block;
+    margin: 0 auto;
+}
+
+@media (max-width: 1024px) {
+    .video {
+        max-width: 400px; /* Set a larger width for desktop */
+    }
 }
