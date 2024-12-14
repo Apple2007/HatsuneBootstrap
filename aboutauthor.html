@@ -48,17 +48,14 @@
 </div>
 <div class="container">   
     <br>
-    <h1 class="text-center">About the Author</h1>
-    <br>
-    <h3 id="username" class="text-center"></h3>
+    <h1 class="text-center">Author's Social Corner</h1>
     <br>
     <div class="row">
         <div class="col-sm-4">
             <h2>My Websites</h2>
             <ul>
-                <li><a href="https://jackshorenstein.com">JackShorenstein.com</a></li>
-                <li><a href="https://dummies.jackshorenstein.com">AWS for Dummies</a></li>
-                <li><a href="https://projects.jackshorenstein.com">Old Projects @ JackShorenstein.com</a></li>
+                <li><a href="https://jackshorenstein.com">Blog @ JackShorenstein.com</a></li>
+                <li><a href="https://landing.jackshorenstein.com">Landing Page with Social Media Links</a></li>
             </ul>
         </div>
         <div class="col-sm-4">
@@ -68,6 +65,7 @@
                 <li><a href="https://github.com/jackshorenstein"><i class="fa-brands fa-github"></i> GitHub</a></li>
                 <li><a href="https://twitter.com/jackshorenstein"><i class="fa-brands fa-twitter"></i> Twitter</a></li>
                 <li><a href="https://www.reddit.com/u/JackShorenstein"><i class="fa-brands fa-reddit"></i> Reddit</a></li>
+                <li><a href="https://dly.to/6hImRKoiMt4"><i class="fa-solid fa-code"></i> daily.dev Profile </a></li>
             </ul>
         </div>
         <div class="col-sm-4">
@@ -75,22 +73,6 @@
             <div id="vocaring"><script src="https://webring.adilene.net/webring.js"></script></div>
         </div>
     </div>
-    <script>
-        if (!localStorage.getItem("username")) {
-            const username = prompt("What is your name? (don't worry, I'm not collecting this... look at the opensource code on GitHub!)");
-            localStorage.setItem("username", username);
-        }
-            
-        const username = localStorage.getItem("username");
-        console.log(username);
-        if (username === "Miku" || username === "miku") {
-            document.getElementById("username").innerHTML = "Wait... MIKU?! OMG, welcome! I hope I represented you right... if not, let me know! I'm a HUGE FAN! :)";
-        } else if (username === "Studio_39" || username === "Studio39" || username === "Studio 39" || username === "studio39") {
-            document.getElementById("username").innerHTML = "Hi me! Development or viewing I see.. well, enjoy your time! ;)";
-        } else {
-            document.getElementById("username").innerHTML = "Welcome to the About Author Page, " + username + "! Thanks for reading about Miku!";
-        }
-    </script>
     <hr>
     <h5 class = "text-center">Copyright © 2024 Jack Shorenstein | All Rights Reserved | Information pulled from sources including <a href="https://vocaloid.fandom.com/wiki/Vocaloid_Wiki">Vocaloid Wiki</a></h5>
 </div>
